@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-2" *ngFor="let salida of salidas">
+        <div class="card text-center">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                No. {{salida.idsalidas}} - Nit: {{salida.nit}}
+                <button class="btn btn-danger" >
+                    <i class="far fa-trash-alt" (click)="deleteSalida(salida.idsalidas)"></i>
+                </button>
+            </div>
+            <div class="card-body">
+                <p>Nombre: {{salida.nombre}}</p>
+                <p>Direccion: {{salida.direccion}}</p>
+                <a [routerLink]="['/salidas/edit', salida.idsalidas]" class="bt btn-info btn-block" (click)="editSalida(salida.idsalidas)">Editar</a>
+            </div>
+        </div>
+    
+    </div>
+    </div>
+    

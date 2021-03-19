@@ -1,0 +1,26 @@
+<div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <input type="number" name="title" [(ngModel)]="salida.idsalidas" placeholder="nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="date" name="fecha" [(ngModel)]="salida.fecha" placeholder="fecha" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="nombre" [(ngModel)]="salida.nombre" placeholder="nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="nit" [(ngModel)]="salida.nit" placeholder="nit" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="direccion" [(ngModel)]="salida.direccion" placeholder="direccion" class="form-control">
+                </div>
+                <button class="btn btn-success btn-block" (click)="edit ? updatesalida() : savesalida()">
+                    Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
